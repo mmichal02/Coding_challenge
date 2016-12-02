@@ -12,13 +12,13 @@ html, body {
 
 .p1 {
   
-   font-family: "Lato";
+   font-family: "Open Sans";
    font-size: 70px;
 }
 
 .p2 {
 	font-style: italic;
-   font-family: "Lato";
+   font-family: "Open Sans";
    font-size: 15px;
 }
 
@@ -42,7 +42,7 @@ input[type="text"] {
   height: 60px;
   font-size: 20px;
   display: inline-block;
-  font-family: "Lato";
+  font-family: "Open Sans";
   font-weight: 100;
   border: none;
   outline: none;

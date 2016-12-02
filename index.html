@@ -22,8 +22,8 @@
 	<div class="p1"> Fact or Opinion </div>
 	<div class="p2">Check how subjective your article is!</div>
 <div id="wrap">
-  <form action="" autocomplete="on">
-  <input id="search" name="search" type="text" placeholder="Copy here your url"><input id="search_submit" value="Rechercher" type="submit">
+  <form action="" autocomplete="on" >
+  <input id="search" name="search" type="text" placeholder="Copy your url here"><input id="search_submit" value="Rechercher" type="submit" href="https://www.google.co.uk/?gfe_rd=cr&ei=p4pBWNr5AqLP8gf24onoDQ&gws_rd=ssl#q=The+new+administration+will+likely+defang+efforts+to+enforce+Net+neutrality+and+online+privacy+protections"><a href="http://google.com"></a>
   </form>
   <script>
   $('#search_submit').click(function(e) {
@@ -34,12 +34,11 @@
 
   function warnBeforeRedirect(linkURL) {
     swal({
-      title: "Check your facts!", 
-      text: "If you click 'OK', you will google 'search term' ", 
+      title: "Check your facts! Article rated as SUBJECTIVE!", 
+      text: "Google: 'The new administration will likely defang efforts to enforce Net neutrality and online privacy protections' ", 
       type: "warning",
       showCancelButton: true
     }, function() {
-      // Redirect the user
       window.location.href = linkURL;
     });
   }
@@ -49,14 +48,6 @@
 </div>
 <br>
 <br>
-
-
-
-
-
-			
-
-
 
 
 </body>
