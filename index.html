@@ -2,29 +2,50 @@
 <html>
 <head>
 	<title>Fact checker website</title>
-
-	<!-- Latest compiled and minified CSS -->
+	<meta charset = "utf-8"/>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-<!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <link rel="stylesheet" type="text/css" href="css.css">
-
+  	<script src="java.js"></script>
+    <script src="sweetalert.min.js"></script>
+<link rel="stylesheet" type="text/css" href="sweetalert.css">
 
 </head>
 <body>
 <br>
 <br>
 <br>	
-	<div class="p1"> Fact validator </div>
-	<div class="p2">Select the loop and check your news!</div>
+	<div class="p1"> Fact or Opinion </div>
+	<div class="p2">Check how subjective your article is!</div>
 <div id="wrap">
   <form action="" autocomplete="on">
   <input id="search" name="search" type="text" placeholder="Copy here your url"><input id="search_submit" value="Rechercher" type="submit">
   </form>
+  <script>
+  $('#search_submit').click(function(e) {
+    e.preventDefault();
+    var linkURL = $(this).attr("href");
+    warnBeforeRedirect(linkURL);
+  });
+
+  function warnBeforeRedirect(linkURL) {
+    swal({
+      title: "Check your facts!", 
+      text: "If you click 'OK', you will google 'search term' ", 
+      type: "warning",
+      showCancelButton: true
+    }, function() {
+      // Redirect the user
+      window.location.href = linkURL;
+    });
+  }
+  </script>
+
+
 </div>
 <br>
 <br>
